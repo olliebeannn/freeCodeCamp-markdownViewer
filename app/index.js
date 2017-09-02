@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Editor from './components/editor';
 
 const App = () => {
   return (
-    <div>Testing</div>
+    <div>
+      Testing
+      <Editor />
+    </div>
   );
 }
 
-ReactDOM.render(React.createElement(App), app);
+ReactDOM.render(<App />, app);
