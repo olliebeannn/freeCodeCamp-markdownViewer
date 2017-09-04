@@ -15,8 +15,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        Testing
-        <Editor />
+        <Editor
+          content={this.state.content}
+          onContentChange={(content) => this.setState({content})} />
         <Previewer content={this.state.content} />
       </div>
     );

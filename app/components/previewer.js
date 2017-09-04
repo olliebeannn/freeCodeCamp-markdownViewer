@@ -6,7 +6,7 @@ const Previewer = ({content}) => {
       <h1>Previewer</h1>
       <div>{content}</div>
     </div>
-  )
+  );
 };
 
 export default Previewer;
