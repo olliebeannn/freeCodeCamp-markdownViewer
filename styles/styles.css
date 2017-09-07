@@ -1,0 +1,12 @@
+.container-fluid {
+  padding: 0;
+}
+
+.editor, .previewer {
+  padding: 1rem 1.5rem;
+}
+
+.editor textarea {
+  height: 90vh;
+  width: 100%;
+}

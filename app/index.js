@@ -14,7 +14,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container-fluid">
         <Editor
           content={this.state.content}
           onContentChange={(content) => this.setState({content})} />

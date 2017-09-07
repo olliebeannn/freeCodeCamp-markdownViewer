@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import marked from 'marked';
-marked.setOptions({sanitize: false});
+marked.setOptions({
+  gfm: true,
+  breaks: true,
+  sanitize: false
+});
 
 class Previewer extends Component {
   createMarkup() {
@@ -9,8 +13,8 @@ class Previewer extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Previewer</h1>
+      <div className="col-sm-6 previewer">
+        <h4>Previewer</h4>
         <div dangerouslySetInnerHTML={this.createMarkup()} />
       </div>
     )
