@@ -1,13 +1,20 @@
-import React from 'react';
-import Marked from 'marked';
+import React, { Component } from 'react';
+import marked from 'marked';
+marked.setOptions({sanitize: false});
 
-const Previewer = ({content}) => {
-  return (
-    <div>
-      <h1>Previewer</h1>
-      <div>{Marked(content)}</div>
-    </div>
-  );
-};
+class Previewer extends Component {
+  createMarkup() {
+    return { __html: marked(this.props.content) };
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Previewer</h1>
+        <div dangerouslySetInnerHTML={this.createMarkup()} />
+      </div>
+    )
+  }
+}
 
 export default Previewer;
